@@ -3,12 +3,18 @@ import TodosPage from "./pages/TodosPage";
 import AboutPage from "./pages/AboutPage";
 import AddTodoPage from "./pages/AddTodoPage";
 
-function AppRoutes() {
+function AppRoutes({ todos, setTodos }) {
   return (
     <Routes>
-      <Route path="/" element={<TodosPage></TodosPage>}></Route>
+      <Route
+        path="/"
+        element={<TodosPage todos={todos} setTodos={setTodos}></TodosPage>}
+      ></Route>
       <Route path="/about" element={<AboutPage></AboutPage>}></Route>
-      <Route path="/add" element={<AddTodoPage></AddTodoPage>}></Route>
+      <Route
+        path="/add"
+        element={<AddTodoPage setTodos={setTodos}></AddTodoPage>}
+      ></Route>
     </Routes>
   );
 }
