@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { AddTodoForm } from "../components/AddTodoForm";
 import { getTodos } from "../api";
+import { Link } from "react-router-dom";
 
 export default function TodosPage() {
   const [todos, setTodos] = useState([
@@ -26,6 +27,10 @@ export default function TodosPage() {
       </ul>
 
       <AddTodoForm todos={todos} setTodos={setTodos} />
+
+      <br />
+      <br />
+      <Link to="/about">О проекте</Link>
     </div>
   );
 }

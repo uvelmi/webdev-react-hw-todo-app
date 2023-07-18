@@ -26,6 +26,7 @@ export function AddTodoForm({ setTodos }) {
 
   return (
     <div>
+      <h3>Добавить задачу</h3>
       <input
         value={newTodoText}
         onChange={(event) => {
