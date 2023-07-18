@@ -6,6 +6,11 @@ export async function getTodos() {
       Authorization: `Bearer ${token}`,
     },
   });
+
+  if (!response.ok) {
+    throw new Error("Ошибка сервера");
+  }
+
   const data = await response.json();
   return data;
 }
@@ -20,6 +25,11 @@ export async function postTodo(text) {
       text,
     }),
   });
+
+  if (!response.ok) {
+    throw new Error("Ошибка сервера");
+  }
+
   const data = await response.json();
   return data;
 }
