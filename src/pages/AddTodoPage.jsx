@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function AboutPage() {
+export default function AddTodoPage() {
   return (
     <div className="page">
       <h3>Навигация</h3>
@@ -11,10 +11,8 @@ export default function AboutPage() {
       <Link to="/about">О проекте</Link>
       <br />
       <br />
-      <h1>О проекте</h1>
-      <p>Это учебный проект Skypro – список задач на react</p>
-      <br />
-      <br />
+      <h1>Страница добавления задачи</h1>
+      <p>Сюда мы перенесем форму добавления</p>
     </div>
   );
 }

@@ -18,6 +18,15 @@ export default function TodosPage() {
 
   return (
     <div className="page">
+      <h3>Навигация</h3>
+      <Link to="/">Задачи</Link>
+      <br />
+      <Link to="/add">Добавить задачу</Link>
+      <br />
+      <Link to="/about">О проекте</Link>
+      <br />
+      <br />
+
       <h1>Список задач</h1>
 
       <ul>
@@ -27,10 +36,6 @@ export default function TodosPage() {
       </ul>
 
       <AddTodoForm todos={todos} setTodos={setTodos} />
-
-      <br />
-      <br />
-      <Link to="/about">О проекте</Link>
     </div>
   );
 }
