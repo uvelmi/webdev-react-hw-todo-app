@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import AppRoutes from "./AppRoutes";
 import { getTodos } from "./api";
+import { Link } from "react-router-dom";
 
 function App() {
   const [todos, setTodos] = useState([
@@ -15,7 +16,28 @@ function App() {
     });
   }, []);
 
-  return <AppRoutes todos={todos} setTodos={setTodos}></AppRoutes>;
+  const [currentTodo, setCurrentTodo] = useState(null);
+
+  return (
+    <>
+      {currentTodo ? (
+        <div className="current-task">Текущая задача: {currentTodo.text}</div>
+      ) : null}
+      <h3>Навигация</h3>
+      <Link to="/">Задачи</Link>
+      <br />
+      <Link to="/add">Добавить задачу</Link>
+      <br />
+      <Link to="/about">О проекте</Link>
+      <br />
+      <br />
+      <AppRoutes
+        setCurrentTodo={setCurrentTodo}
+        todos={todos}
+        setTodos={setTodos}
+      ></AppRoutes>
+    </>
+  );
 }
 
 export default App;

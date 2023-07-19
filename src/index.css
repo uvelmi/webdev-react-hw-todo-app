@@ -15,3 +15,17 @@ code {
 .page {
   padding: 10px 20px;
 }
+
+.current-task {
+  background-color: coral;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.todo-item {
+  cursor: pointer;
+}
+
+.todo-item:hover {
+  background-color: coral;
+}
